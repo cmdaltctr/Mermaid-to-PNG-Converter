@@ -54,3 +54,4 @@ config.json
 secrets.txt
 /secrets/
 lib/prismjs/*
+.vscode/
