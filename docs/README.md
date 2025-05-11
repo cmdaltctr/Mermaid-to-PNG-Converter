@@ -20,10 +20,10 @@ A web application to convert Mermaid diagrams to PNG images.
 
 ## Documentation
 
-For more detailed documentation, please refer to [docS/documentation.md](docs/documentation.md).
+For more detailed documentation, please refer to [documentation.md](docs/DOCUMENTATION.md).
 
 ## License
 
-This project is licensed under the MIT License - see [`License.md`](docs/license.md) for details.
+This project is licensed under the MIT License - see [`License.md`](docs/LICENSE.md) for details.
 
 Copyright (c) 2025 Muhammad Aizat Hawari
