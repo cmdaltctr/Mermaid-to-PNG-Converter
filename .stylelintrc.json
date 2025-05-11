@@ -1,0 +1,4 @@
+{
+  "ignoreFiles": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+  "extends": "stylelint-config-standard"
+}
