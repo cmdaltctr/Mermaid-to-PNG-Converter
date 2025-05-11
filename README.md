@@ -1,4 +1,4 @@
-# Mermaid PNG Converter
+# Mermaid to PNG Converter
 
 A web application to convert Mermaid diagrams to PNG images.
 
