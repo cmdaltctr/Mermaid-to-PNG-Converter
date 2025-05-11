@@ -9,7 +9,7 @@ Desktop.ini
 
 # Editor and IDE generated files #
 ##################################
-.vscode/       # VS Code settings
+.vscode/        # VS Code settings
 *.suo           # Visual Studio solution user options
 *.user          # Visual Studio user-specific files
 *.bak           # Backup files (generic)
