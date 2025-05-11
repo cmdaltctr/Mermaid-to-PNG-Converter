@@ -1,0 +1,51 @@
+/* Dark mode styles */
+[data-theme="dark"] {
+  --text-colour: #e0e0e0;
+  --background-colour: #1a1a1a;
+  --border-colour: #333;
+  --code-background: #2d2d2d;
+  --preview-background: #2d2d2d;
+}
+
+/* Dark mode specific overrides */
+[data-theme="dark"] .code-section,
+[data-theme="dark"] .preview-section {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .download-btn {
+  background-color: #6a45c0;
+}
+
+[data-theme="dark"] .download-btn:hover {
+  background-color: #8253e6;
+}
+
+/* Dark mode code highlighting overrides */
+[data-theme="dark"] .token.comment,
+[data-theme="dark"] .token.prolog,
+[data-theme="dark"] .token.doctype,
+[data-theme="dark"] .token.cdata {
+  color: #6a9955;
+}
+
+[data-theme="dark"] .token.punctuation {
+  color: #d4d4d4;
+}
+
+[data-theme="dark"] .token.property,
+[data-theme="dark"] .token.tag,
+[data-theme="dark"] .token.boolean,
+[data-theme="dark"] .token.number,
+[data-theme="dark"] .token.constant,
+[data-theme="dark"] .token.symbol {
+  color: #b5cea8;
+}
+
+[data-theme="dark"] .token.selector,
+[data-theme="dark"] .token.attr-name,
+[data-theme="dark"] .token.string,
+[data-theme="dark"] .token.char,
+[data-theme="dark"] .token.builtin {
+  color: #ce9178;
+}

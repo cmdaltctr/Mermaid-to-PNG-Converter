@@ -1,0 +1,238 @@
+/*!
+ * Organic Reset CSS v1.0.0 
+ *
+ * Copyright (c) 2025 Muhammad Aizat Hawari
+ * Licensed under the MIT License 
+ */
+
+/* Reset box model for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set base font and color variables */
+:root {
+  --og-font:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  --og-text: rgb(55, 53, 47);
+  --og-text-light: rgba(55, 53, 47, 0.6);
+  --og-bg-white: #ffffff;
+  --og-bg-light: #f7f6f3;
+  --og-bg-hover: rgba(55, 53, 47, 0.08);
+  --og-border: rgba(55, 53, 47, 0.09);
+  --og-selected: rgba(35, 131, 226, 0.12);
+  --og-blue: rgb(46, 170, 220);
+  --og-spacer: 3px;
+}
+
+/* Document setup */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: var(--og-font);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--og-text);
+  background-color: var(--og-bg-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Basic typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+}
+
+h1 {
+  font-size: 1.875em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+p {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  min-height: 1.5em;
+}
+
+/* Links */
+a {
+  color: var(--og-blue);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Lists */
+ul,
+ol {
+  margin-left: 1.5em;
+  padding-left: 0;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+li {
+  margin-bottom: 0.25em;
+}
+
+/* Code blocks */
+code,
+pre {
+  font-family:
+    SFMono-Regular, Menlo, Consolas, "PT Mono", "Liberation Mono", Courier,
+    monospace;
+  font-size: 0.85em;
+  background-color: rgba(135, 131, 120, 0.1);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+}
+
+pre {
+  padding: 0.75em 1em;
+  margin: 0.5em 0;
+  overflow-x: auto;
+}
+
+/* Tables - Notion-like */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  border: 1px solid var(--og-border);
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 0.5em 0.75em;
+  border: 1px solid var(--og-border);
+  text-align: left;
+}
+
+th {
+  font-weight: 500;
+  background-color: var(--og-bg-light);
+}
+
+/* Blockquote */
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0.9em;
+  border-left: 3px solid var(--og-border);
+  color: var(--og-text-light);
+}
+
+/* Divider */
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--og-border);
+  margin: 2em 0;
+}
+
+/* Forms and inputs - Notion-like styling */
+input,
+textarea,
+select,
+button {
+  font-family: var(--og-font);
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+input,
+textarea,
+select {
+  padding: 0.5em 0.75em;
+  border: 1px solid var(--og-border);
+  background-color: var(--og-bg-white);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--og-blue);
+}
+
+button {
+  padding: 0.5em 0.75em;
+  background-color: var(--og-bg-white);
+  border: 1px solid var(--og-border);
+  color: var(--og-text);
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+button:hover {
+  background-color: var(--og-bg-hover);
+}
+
+/* Utility classes for organic spacing */
+.og-spacer {
+  height: var(--og-spacer);
+}
+
+/* Organic selection styling */
+::selection {
+  background-color: var(--og-selected);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+/* Checkbox styling similar to original */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid var(--og-border);
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  margin-right: 8px;
+  position: relative;
+  top: 3px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--og-blue);
+  border-color: var(--og-blue);
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: white;
+  position: absolute;
+  font-size: 12px;
+  left: 2px;
+  top: -1px;
+}

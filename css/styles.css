@@ -1,0 +1,239 @@
+/* Custom properties for consistent theming */
+:root {
+	--brand-colour: #8253e6;
+	--text-colour: #333;
+	--background-colour: #fff;
+	--border-colour: #e0e0e0;
+	--code-background: #f5f5f5;
+	--preview-background: #fff;
+	--header-height: 70px;
+}
+
+/* Reset and base styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family:
+		-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+		Cantarell, sans-serif;
+	line-height: 1.6;
+	color: var(--text-colour);
+	background-color: var(--background-colour);
+	transition: background-color 0.3s ease;
+}
+
+/* Container for consistent width */
+.container {
+	max-width: 1200px;
+	margin: 2rem auto;
+	padding: 0 20px;
+}
+
+/* Header styles */
+header {
+	background-color: var(--brand-colour);
+	color: white;
+	height: var(--header-height);
+	display: flex;
+	align-items: center;
+}
+
+header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+h1 {
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+
+/* Main content layout */
+main {
+	padding: 2rem 0;
+}
+
+.converter-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	margin-bottom: 2rem;
+}
+
+/* Code section styles */
+.code-section,
+.preview-section {
+	background: var(--code-background);
+	border-radius: 8px;
+	padding: 1.5rem;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+	margin-bottom: 1rem;
+	color: var(--brand-colour);
+	font-size: 1.4rem;
+}
+
+.code-container {
+	position: relative;
+	height: 400px;
+	overflow: auto;
+}
+
+/* Preview section styles */
+.preview-container {
+	background: var(--preview-background);
+	border-radius: 4px;
+	padding: 1rem;
+	height: 400px;
+	overflow: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Download section styles */
+.download-section {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.download-btn {
+	background-color: var(--brand-colour);
+	color: white;
+	border: none;
+	padding: 0.8rem 2rem;
+	border-radius: 4px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+	background-color: #6a45c0;
+}
+
+/* Theme toggle button */
+#themeToggle {
+	background: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+	font-size: 1.2rem;
+	padding: 0.5rem;
+	border-radius: 50%;
+	transition: background-color 0.3s ease;
+}
+
+#themeToggle:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.converter-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.code-container,
+	.preview-container {
+		height: 300px;
+	}
+}
+
+/* Theme switcher pill slider */
+.theme-switch {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	width: 60px;
+	height: 30px;
+}
+
+.theme-switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.theme-switch .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #ffe066;
+	border-radius: 30px;
+	transition: background 0.3s;
+}
+
+.theme-switch .knob-icon {
+	position: absolute;
+	top: 2px;
+	left: 5px;
+	width: 25px;
+	height: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+	transition:
+		transform 0.3s,
+		background 0.3s;
+	z-index: 2;
+}
+
+.theme-switch input:checked + .slider {
+	background: #222;
+}
+
+.theme-switch input:checked + .slider .knob-icon {
+	transform: translateX(25px);
+	background: #423f3f;
+}
+
+.theme-switch .knob-icon i {
+	position: absolute;
+	left: 3px;
+	right: 0;
+	top: 4px;
+	bottom: 0;
+	margin: auto;
+	font-size: 16px;
+	z-index: 3;
+	transition:
+		color 0.3s,
+		opacity 0.3s;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.theme-switch .knob-icon .fa-sun {
+	color: #333;
+	opacity: 1;
+}
+
+.theme-switch input:checked + .slider .knob-icon .fa-sun {
+	color: #fff;
+	opacity: 0;
+}
+
+.theme-switch .knob-icon .fa-moon {
+	color: #fff;
+	opacity: 0;
+}
+
+.theme-switch input:checked + .slider .knob-icon .fa-moon {
+	color: #ffe066;
+	opacity: 1;
+}
