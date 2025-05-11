@@ -1,9 +1,0 @@
-{
-	"css.validate": false,
-	"less.validate": false,
-	"scss.validate": false,
-	"[javascript]": {
-		"css.validate": false
-	},
-	"liveServer.settings.port": 5501
-}
