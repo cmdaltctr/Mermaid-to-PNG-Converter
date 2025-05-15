@@ -58,3 +58,40 @@ export const initDownload = () => {
 		}
 	});
 };
+
+// Function to download SVG
+export const initDownloadSVG = () => {
+	const downloadSVGBtn = document.getElementById("downloadSVGBtn");
+	const previewElement = document.getElementById("mermaidPreview");
+
+	downloadSVGBtn.addEventListener("click", () => {
+		try {
+			// Get the SVG content
+			const svgElement = previewElement.querySelector("svg");
+			if (!svgElement) {
+				throw new Error("No SVG element found in the preview.");
+			}
+
+			// Serialize the SVG content
+			const serializer = new XMLSerializer();
+			const svgContent = serializer.serializeToString(svgElement);
+
+			// Create a Blob for the SVG
+			const blob = new Blob([svgContent], { type: "image/svg+xml" });
+
+			// Create download link
+			const url = URL.createObjectURL(blob);
+			const link = document.createElement("a");
+			link.href = url;
+			link.download = "mermaid-diagram.svg";
+
+			// Trigger download
+			document.body.appendChild(link);
+			link.click();
+			document.body.removeChild(link);
+			URL.revokeObjectURL(url);
+		} catch (error) {
+			console.error("SVG download failed:", error);
+		}
+	});
+};

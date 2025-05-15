@@ -27,3 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	}, 0);
 });
+
+// Initialize the SVG download functionality
+import { initDownloadSVG } from "./download.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+	initDownloadSVG();
+});
