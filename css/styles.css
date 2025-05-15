@@ -60,10 +60,14 @@ main {
 }
 
 .converter-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 2rem;
-	margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.code-section {
+    overflow-x: auto;
 }
 
 /* Code section styles */
