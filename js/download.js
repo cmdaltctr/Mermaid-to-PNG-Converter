@@ -18,7 +18,7 @@ export const initDownload = () => {
 				// Convert SVG to PNG using html2canvas
 				const canvas = await html2canvas(previewElement, {
 					backgroundColor: null,
-					scale: 2, // Higher quality
+					scale: 7, // Increased quality
 					logging: false,
 					useCORS: true,
 				});
