@@ -241,3 +241,12 @@ h2 {
 	color: #ffe066;
 	opacity: 1;
 }
+
+/* Explicit styles for SVG elements */
+svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+}
